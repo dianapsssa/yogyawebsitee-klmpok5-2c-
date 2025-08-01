@@ -1,0 +1,171 @@
+/* Reset and base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible {
+  outline: 2px solid #b08968;
+  outline-offset: 2px;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 24px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #fdf6ec;
+}
+::-webkit-scrollbar-thumb {
+  background: #b08968;
+  border-radius: 4px;
+}
+
+/* Header */
+.header {
+  position: sticky;
+  top: 0;
+  height: 64px;
+  backdrop-filter: blur(16px);
+  background: rgba(253, 246, 236, 0.9);
+  box-shadow: 0 2px 8px rgba(176, 137, 104, 0.2);
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-weight: 900;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  background: linear-gradient(135deg, #7b5e57 0%, #a98467 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  user-select: none;
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+}
+.nav-link {
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: #3e2f27;
+  transition: background 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+  background: rgba(221, 184, 146, 0.2);
+}
+
+body {
+  background-image: url('yogyakarta.jpg'); 
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  color: #fff;
+}
+
+.konten {
+  background-color: rgba(0, 0, 0, 0.4); 
+  padding: 20px 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.konten h1, .konten p {
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.galeri-kotak {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 30px auto;
+  max-width: 900px;
+}
+
+.foto-item {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1); 
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.foto-item img {
+  width: 250px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  opacity: 0.95;
+}
+
+.foto-item p {
+  color: white;
+  font-weight: bold;
+}
+
+/* Footer */
+.footer {
+  background: rgba(253, 246, 236, 0.95);
+  backdrop-filter: blur(16px);
+  padding: 16px 24px;
+  color: #5a3e36;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  user-select: none;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 24px;
+}
+.footer p {
+  margin: 0;
+}
+
+.social-link {
+  color: #7b5e57;
+  font-size: 28px;
+  margin-left: 16px;
+  transition: color 0.3s ease;
+}
+.social-link:hover,
+.social-link:focus-visible {
+  color: #a98467;
+  outline: none;
+}
